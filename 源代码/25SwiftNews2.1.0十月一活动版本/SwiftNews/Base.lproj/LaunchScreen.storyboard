@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift" translatesAutoresizingMaskIntoConstraints="NO" id="xsY-uf-LDN">
+                                <rect key="frame" x="150" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="lPj-qN-CAV"/>
+                                    <constraint firstAttribute="width" constant="100" id="o9h-Xa-Ghz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All              News in your hand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="qKp-T3-ARG">
+                                <rect key="frame" x="13" y="320" width="575" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VYK-ny-6eg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.36470588235294116" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xsY-uf-LDN" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3uj-RK-hbs"/>
+                            <constraint firstAttribute="trailing" secondItem="qKp-T3-ARG" secondAttribute="trailing" constant="12" id="4Gb-wO-WNl"/>
+                            <constraint firstItem="xsY-uf-LDN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-100" id="EDl-ST-doo"/>
+                            <constraint firstItem="qKp-T3-ARG" firstAttribute="top" secondItem="xsY-uf-LDN" secondAttribute="bottom" constant="-30" id="JfL-C2-qtq"/>
+                            <constraint firstItem="qKp-T3-ARG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="13" id="aAP-dg-6Hk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="swift" width="100" height="100"/>
+    </resources>
+</document>

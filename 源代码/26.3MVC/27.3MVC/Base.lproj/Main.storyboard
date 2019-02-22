@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_7_3MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNJ-fY-eMA" customClass="LoginView" customModule="_7_3MVC" customModuleProvider="target">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lN2-Q7-1Ho">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IWA-bz-X8W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q4z-u6-4vV">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-oW-ohM">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Obi-1G-7Es"/>
+                                        </constraints>
+                                        <state key="normal" title="登陆"/>
+                                        <connections>
+                                            <action selector="touchupInsideBtnLogin:" destination="RNJ-fY-eMA" eventType="touchUpInside" id="e63-mX-cJQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Q4z-u6-4vV" firstAttribute="top" secondItem="lN2-Q7-1Ho" secondAttribute="bottom" constant="33" id="3NW-do-ffl"/>
+                                    <constraint firstItem="6Kd-oW-ohM" firstAttribute="leading" secondItem="RNJ-fY-eMA" secondAttribute="leading" constant="110" id="A8h-10-XbA"/>
+                                    <constraint firstItem="Q4z-u6-4vV" firstAttribute="trailing" secondItem="lN2-Q7-1Ho" secondAttribute="trailing" id="Cgz-HG-hP5"/>
+                                    <constraint firstItem="Q4z-u6-4vV" firstAttribute="leading" secondItem="lN2-Q7-1Ho" secondAttribute="leading" id="g6B-Zh-EtT"/>
+                                    <constraint firstItem="6Kd-oW-ohM" firstAttribute="top" secondItem="Q4z-u6-4vV" secondAttribute="bottom" constant="39" id="gzN-gl-5oc"/>
+                                    <constraint firstAttribute="trailing" secondItem="lN2-Q7-1Ho" secondAttribute="trailing" constant="53" id="nRC-A1-3eg"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Kd-oW-ohM" secondAttribute="trailing" constant="109" id="s1e-qc-5Xi"/>
+                                    <constraint firstItem="lN2-Q7-1Ho" firstAttribute="top" secondItem="RNJ-fY-eMA" secondAttribute="top" constant="62" id="uK0-gc-wnA"/>
+                                    <constraint firstItem="lN2-Q7-1Ho" firstAttribute="leading" secondItem="RNJ-fY-eMA" secondAttribute="leading" constant="53" id="uT5-G3-JIa"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="btnLogin" destination="6Kd-oW-ohM" id="QVO-vg-JUA"/>
+                                    <outlet property="txtfName" destination="lN2-Q7-1Ho" id="dyv-RD-aVD"/>
+                                    <outlet property="txtfPwd" destination="Q4z-u6-4vV" id="L2b-tx-KLA"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RNJ-fY-eMA" secondAttribute="bottom" constant="154" id="2g0-23-1ZV"/>
+                            <constraint firstItem="RNJ-fY-eMA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Fkr-rC-ZQt"/>
+                            <constraint firstItem="RNJ-fY-eMA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="bIO-wt-7a8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RNJ-fY-eMA" secondAttribute="trailing" constant="9" id="cvN-Aq-RPf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="vLogin" destination="RNJ-fY-eMA" id="eao-AM-2ap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236" y="25"/>
+        </scene>
+    </scenes>
+</document>
