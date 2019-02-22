@@ -1,0 +1,6 @@
+framework module Pods_Alamofire_SingletonPattern {
+  umbrella header "Pods-Alamofire_SingletonPattern-umbrella.h"
+
+  export *
+  module * { export * }
+}

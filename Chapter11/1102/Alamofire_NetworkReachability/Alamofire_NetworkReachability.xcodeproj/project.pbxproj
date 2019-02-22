@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F603845221FDF8200D8F67F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F603844221FDF8200D8F67F /* AppDelegate.swift */; };
+		3F603847221FDF8200D8F67F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F603846221FDF8200D8F67F /* ViewController.swift */; };
+		3F60384A221FDF8200D8F67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F603848221FDF8200D8F67F /* Main.storyboard */; };
+		3F60384C221FDF8700D8F67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F60384B221FDF8700D8F67F /* Assets.xcassets */; };
+		3F60384F221FDF8700D8F67F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F60384D221FDF8700D8F67F /* LaunchScreen.storyboard */; };
+		3F60385A221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F603859221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests.swift */; };
+		3F603865221FE94900D8F67F /* MyNetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F603864221FE94800D8F67F /* MyNetworkReachabilityManager.swift */; };
+		3F603866221FE94900D8F67F /* MyNetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F603864221FE94800D8F67F /* MyNetworkReachabilityManager.swift */; };
+		4392F13260F4422EE698A83D /* Pods_Alamofire_NetworkReachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93671A8223CF3EB074AD417 /* Pods_Alamofire_NetworkReachability.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F603856221FDF8700D8F67F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F603839221FDF8200D8F67F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F603840221FDF8200D8F67F;
+			remoteInfo = Alamofire_NetworkReachability;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F603841221FDF8200D8F67F /* Alamofire_NetworkReachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alamofire_NetworkReachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F603844221FDF8200D8F67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F603846221FDF8200D8F67F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F603849221FDF8200D8F67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F60384B221FDF8700D8F67F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F60384E221FDF8700D8F67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F603850221FDF8700D8F67F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F603855221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Alamofire_NetworkReachabilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F603859221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire_NetworkReachabilityTests.swift; sourceTree = "<group>"; };
+		3F60385B221FDF8700D8F67F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F603864221FE94800D8F67F /* MyNetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		5231E16807A39A4B0E9C980A /* Pods-Alamofire_NetworkReachability.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alamofire_NetworkReachability.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alamofire_NetworkReachability/Pods-Alamofire_NetworkReachability.debug.xcconfig"; sourceTree = "<group>"; };
+		52E18557C513526982C546FC /* Pods-Alamofire_NetworkReachability.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alamofire_NetworkReachability.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alamofire_NetworkReachability/Pods-Alamofire_NetworkReachability.release.xcconfig"; sourceTree = "<group>"; };
+		E93671A8223CF3EB074AD417 /* Pods_Alamofire_NetworkReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alamofire_NetworkReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F60383E221FDF8200D8F67F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4392F13260F4422EE698A83D /* Pods_Alamofire_NetworkReachability.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F603852221FDF8700D8F67F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F603838221FDF8200D8F67F = {
+			isa = PBXGroup;
+			children = (
+				3F603843221FDF8200D8F67F /* Alamofire_NetworkReachability */,
+				3F603858221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests */,
+				3F603842221FDF8200D8F67F /* Products */,
+				9B2E39B553E8C3230252BE3A /* Pods */,
+				9D4C0CFDE117235D014E0C16 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3F603842221FDF8200D8F67F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F603841221FDF8200D8F67F /* Alamofire_NetworkReachability.app */,
+				3F603855221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F603843221FDF8200D8F67F /* Alamofire_NetworkReachability */ = {
+			isa = PBXGroup;
+			children = (
+				3F603844221FDF8200D8F67F /* AppDelegate.swift */,
+				3F603846221FDF8200D8F67F /* ViewController.swift */,
+				3F603864221FE94800D8F67F /* MyNetworkReachabilityManager.swift */,
+				3F603848221FDF8200D8F67F /* Main.storyboard */,
+				3F60384B221FDF8700D8F67F /* Assets.xcassets */,
+				3F60384D221FDF8700D8F67F /* LaunchScreen.storyboard */,
+				3F603850221FDF8700D8F67F /* Info.plist */,
+			);
+			path = Alamofire_NetworkReachability;
+			sourceTree = "<group>";
+		};
+		3F603858221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F603859221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests.swift */,
+				3F60385B221FDF8700D8F67F /* Info.plist */,
+			);
+			path = Alamofire_NetworkReachabilityTests;
+			sourceTree = "<group>";
+		};
+		9B2E39B553E8C3230252BE3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5231E16807A39A4B0E9C980A /* Pods-Alamofire_NetworkReachability.debug.xcconfig */,
+				52E18557C513526982C546FC /* Pods-Alamofire_NetworkReachability.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D4C0CFDE117235D014E0C16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E93671A8223CF3EB074AD417 /* Pods_Alamofire_NetworkReachability.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F603840221FDF8200D8F67F /* Alamofire_NetworkReachability */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F60385E221FDF8700D8F67F /* Build configuration list for PBXNativeTarget "Alamofire_NetworkReachability" */;
+			buildPhases = (
+				51F9ECB14613FB78DC52ECCF /* [CP] Check Pods Manifest.lock */,
+				3F60383D221FDF8200D8F67F /* Sources */,
+				3F60383E221FDF8200D8F67F /* Frameworks */,
+				3F60383F221FDF8200D8F67F /* Resources */,
+				0AF38D61F287E8B78B209D7D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire_NetworkReachability;
+			productName = Alamofire_NetworkReachability;
+			productReference = 3F603841221FDF8200D8F67F /* Alamofire_NetworkReachability.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F603854221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F603861221FDF8700D8F67F /* Build configuration list for PBXNativeTarget "Alamofire_NetworkReachabilityTests" */;
+			buildPhases = (
+				3F603851221FDF8700D8F67F /* Sources */,
+				3F603852221FDF8700D8F67F /* Frameworks */,
+				3F603853221FDF8700D8F67F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F603857221FDF8700D8F67F /* PBXTargetDependency */,
+			);
+			name = Alamofire_NetworkReachabilityTests;
+			productName = Alamofire_NetworkReachabilityTests;
+			productReference = 3F603855221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F603839221FDF8200D8F67F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = CoderDream;
+				TargetAttributes = {
+					3F603840221FDF8200D8F67F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3F603854221FDF8700D8F67F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3F603840221FDF8200D8F67F;
+					};
+				};
+			};
+			buildConfigurationList = 3F60383C221FDF8200D8F67F /* Build configuration list for PBXProject "Alamofire_NetworkReachability" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F603838221FDF8200D8F67F;
+			productRefGroup = 3F603842221FDF8200D8F67F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F603840221FDF8200D8F67F /* Alamofire_NetworkReachability */,
+				3F603854221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F60383F221FDF8200D8F67F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F60384F221FDF8700D8F67F /* LaunchScreen.storyboard in Resources */,
+				3F60384C221FDF8700D8F67F /* Assets.xcassets in Resources */,
+				3F60384A221FDF8200D8F67F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F603853221FDF8700D8F67F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AF38D61F287E8B78B209D7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Alamofire_NetworkReachability/Pods-Alamofire_NetworkReachability-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alamofire_NetworkReachability/Pods-Alamofire_NetworkReachability-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51F9ECB14613FB78DC52ECCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alamofire_NetworkReachability-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F60383D221FDF8200D8F67F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F603847221FDF8200D8F67F /* ViewController.swift in Sources */,
+				3F603865221FE94900D8F67F /* MyNetworkReachabilityManager.swift in Sources */,
+				3F603845221FDF8200D8F67F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F603851221FDF8700D8F67F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F60385A221FDF8700D8F67F /* Alamofire_NetworkReachabilityTests.swift in Sources */,
+				3F603866221FE94900D8F67F /* MyNetworkReachabilityManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F603857221FDF8700D8F67F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F603840221FDF8200D8F67F /* Alamofire_NetworkReachability */;
+			targetProxy = 3F603856221FDF8700D8F67F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F603848221FDF8200D8F67F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F603849221FDF8200D8F67F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F60384D221FDF8700D8F67F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F60384E221FDF8700D8F67F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F60385C221FDF8700D8F67F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F60385D221FDF8700D8F67F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F60385F221FDF8700D8F67F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5231E16807A39A4B0E9C980A /* Pods-Alamofire_NetworkReachability.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84YDQ32Q44;
+				INFOPLIST_FILE = Alamofire_NetworkReachability/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coderdream.Alamofire-NetworkReachability";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F603860221FDF8700D8F67F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52E18557C513526982C546FC /* Pods-Alamofire_NetworkReachability.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84YDQ32Q44;
+				INFOPLIST_FILE = Alamofire_NetworkReachability/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coderdream.Alamofire-NetworkReachability";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3F603862221FDF8700D8F67F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84YDQ32Q44;
+				INFOPLIST_FILE = Alamofire_NetworkReachabilityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coderdream.Alamofire-NetworkReachabilityTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alamofire_NetworkReachability.app/Alamofire_NetworkReachability";
+			};
+			name = Debug;
+		};
+		3F603863221FDF8700D8F67F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84YDQ32Q44;
+				INFOPLIST_FILE = Alamofire_NetworkReachabilityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coderdream.Alamofire-NetworkReachabilityTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alamofire_NetworkReachability.app/Alamofire_NetworkReachability";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F60383C221FDF8200D8F67F /* Build configuration list for PBXProject "Alamofire_NetworkReachability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F60385C221FDF8700D8F67F /* Debug */,
+				3F60385D221FDF8700D8F67F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F60385E221FDF8700D8F67F /* Build configuration list for PBXNativeTarget "Alamofire_NetworkReachability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F60385F221FDF8700D8F67F /* Debug */,
+				3F603860221FDF8700D8F67F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F603861221FDF8700D8F67F /* Build configuration list for PBXNativeTarget "Alamofire_NetworkReachabilityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F603862221FDF8700D8F67F /* Debug */,
+				3F603863221FDF8700D8F67F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F603839221FDF8200D8F67F /* Project object */;
+}

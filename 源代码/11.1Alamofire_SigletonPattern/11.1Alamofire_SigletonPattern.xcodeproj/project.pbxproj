@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					A9CD9FAD1D43AE8700C3390A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 84YDQ32Q44;
 					};
 				};
 			};
@@ -249,9 +250,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 84YDQ32Q44;
 				INFOPLIST_FILE = 11.1Alamofire_SigletonPattern/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.creditease.-1-1Alamofire-SigletonPattern";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderdream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -260,9 +262,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 84YDQ32Q44;
 				INFOPLIST_FILE = 11.1Alamofire_SigletonPattern/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.creditease.-1-1Alamofire-SigletonPattern";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderdream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -286,6 +289,7 @@
 				A9CD9FC21D43AE8700C3390A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
