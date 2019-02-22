@@ -1,0 +1,6 @@
+platform :ios, '12.1'
+use_frameworks!
+
+target 'Alamofire_NetworkReachability' do
+   pod 'Alamofire', '~> 4.8.0'
+end
