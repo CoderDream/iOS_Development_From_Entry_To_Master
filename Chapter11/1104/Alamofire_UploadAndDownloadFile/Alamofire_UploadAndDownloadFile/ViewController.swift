@@ -70,15 +70,16 @@ class ViewController: UIViewController {
     
     @IBAction func clickDownloadBtn(_ sender: UIButton) {
         let destination = DownloadRequest.suggestedDownloadDestination(for: .documentDirectory)
-        Alamofire.download("https://httpbin.org/image/png", to: destination).downloadProgress { progress in
+        let imageURL = "https://httpbin.org/image/png"
+        //let imageURL = "http://aggie-horticulture.tamu.edu/wildseed/flowers/AlamoFire.jpg"
+        Alamofire.download(imageURL, to: destination).downloadProgress { progress in
                 print("完成比例：\(progress.fractionCompleted)")
                 print("当前完成：\(progress.completedUnitCount)")
                 print("总共大小：\(progress.totalUnitCount)")
-            }.responseJSON { response in
+            }.responseData { response in // 这里一定要取 responseData，否则报错
                 if let data = response.result.value {
-                    // Cannot convert value of type 'Any' to expected argument type 'Data'
                     let image = UIImage(data: data)
-                    imageView.image = image
+                    self.imageView.image = image
                 }
                 let message = "下载图片结果：\(response.result)"
                 print(message)
