@@ -5,7 +5,26 @@ Chapter11 Alamofire
 
 ### Get and Post Requset
 
-- Get Request
+
+- Get   
+```swift
+@IBAction func clickGetRequestBtn(_ sender: UIButton) {
+    Alamofire.request("https://httpbin.org/get", method: .get, parameters: ["foo":"bar"]).responseJSON { response in
+        print("original URL request: \(String(describing: response.request))")
+        print("URL response: \(String(describing: response.response))")
+        print("server data: \(String(describing: response.data))")
+        print("timeline data: \(String(describing: response.timeline))")
+        print("result of response serialization: \(response.result)")
+        
+        if let JSON = response.result.value {
+            print("JSON: \(JSON)")
+        }
+    }
+    
+}
+```
+
+- Get Request  
 ```
 original URL request: Optional(https://httpbin.org/get?foo=bar)
 URL response: Optional(<NSHTTPURLResponse: 0x60000189a480> { URL: https://httpbin.org/get?foo=bar } { Status Code: 200, Headers {
@@ -54,8 +73,34 @@ JSON: {
 }
 ```
 
+- Post  
+```swift
+@IBAction func clickPostRequestBtn(_ sender: UIButton) {
+    let parameters = [
+        "foo" : "bar",
+        "baz" : ["a", 1],
+        "qux" : [
+            "x" : 1,
+            "y" : 2,
+            "z" : 3
+        ]
+    ] as [String : Any]
+    
+    Alamofire.request("https://httpbin.org/post", method: .post, parameters: parameters).responseJSON { response in
+        print("original URL request: \(String(describing: response.request))")
+        print("URL response: \(String(describing: response.response))")
+        print("server data: \(String(describing: response.data))")
+        print("timeline data: \(String(describing: response.timeline))")
+        print("result of response serialization: \(response.result)")
+        
+        if let JSON = response.result.value {
+            print("JSON: \(JSON)")
+        }
+    }
+}
+```
 
-- Post Request
+- Post Request  
 ```
 original URL request: Optional(https://httpbin.org/post)
 URL response: Optional(<NSHTTPURLResponse: 0x600001899ea0> { URL: https://httpbin.org/post } { Status Code: 200, Headers {

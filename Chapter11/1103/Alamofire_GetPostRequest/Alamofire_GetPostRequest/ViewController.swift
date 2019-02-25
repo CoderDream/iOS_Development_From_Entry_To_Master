@@ -16,13 +16,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
     @IBAction func clickGetRequestBtn(_ sender: UIButton) {
         Alamofire.request("https://httpbin.org/get", method: .get, parameters: ["foo":"bar"]).responseJSON { response in
             print("original URL request: \(String(describing: response.request))")
             print("URL response: \(String(describing: response.response))")
             print("server data: \(String(describing: response.data))")
-            print("server data: \(response.data)")
             print("timeline data: \(String(describing: response.timeline))")
             print("result of response serialization: \(response.result)")
             
@@ -54,7 +52,6 @@ class ViewController: UIViewController {
                 print("JSON: \(JSON)")
             }
         }
-        
     }
 }
 
