@@ -25,4 +25,10 @@ class MyNetworkReachabilityManager {
         
         return instance
     }
+    
+    func networkReachabilityStatus() -> Alamofire.NetworkReachabilityManager.NetworkReachabilityStatus {
+        let status: Alamofire.NetworkReachabilityManager.NetworkReachabilityStatus = (manager?.networkReachabilityStatus)!
+        print("当前网络状态:\(status)")
+        return status
+    }
 }
