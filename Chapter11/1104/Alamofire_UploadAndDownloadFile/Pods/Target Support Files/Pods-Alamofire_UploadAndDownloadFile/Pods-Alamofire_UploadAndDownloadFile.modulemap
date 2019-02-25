@@ -1,0 +1,6 @@
+framework module Pods_Alamofire_UploadAndDownloadFile {
+  umbrella header "Pods-Alamofire_UploadAndDownloadFile-umbrella.h"
+
+  export *
+  module * { export * }
+}

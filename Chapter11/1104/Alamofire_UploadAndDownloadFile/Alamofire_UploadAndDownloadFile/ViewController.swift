@@ -11,6 +11,8 @@ import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -75,7 +77,8 @@ class ViewController: UIViewController {
             }.responseJSON { response in
                 if let data = response.result.value {
                     // Cannot convert value of type 'Any' to expected argument type 'Data'
-                    //let image = UIImage(data: data)
+                    let image = UIImage(data: data)
+                    imageView.image = image
                 }
                 let message = "下载图片结果：\(response.result)"
                 print(message)
