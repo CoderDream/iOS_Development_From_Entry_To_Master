@@ -83,14 +83,20 @@ Storyboard创建后，将在左侧的项目导航区出现一个名为 AnotherSt
 然后在Image View控件上按下鼠标右键，并拖动鼠标至右侧的代码文件中，或者在按下Control键的同时，在Image View控件上按下鼠标左键，并拖动至右侧的代码文件中，然后松开鼠标，此时会自动打开连接设置窗口，如图19.23所示。   
 ![](snapshot/1901_1923.jpg)  
 图19.23  
-在弹出的连接设置窗口中的【Name】输入框内，输入imageView，作为Image View控件在类文件中对应的属性名称。然后点击连接按钮，完成连接的操作。连接完成后，将在ViewController.swift文件中，增加一个名为imageView的属性，该属性的类型为UIImageView。左侧的@IBOutlet标记，说明该属性是来自Storyboard控件的连接属性：
-1 @IBOutlet var imageView：UIImageView！
+在弹出的连接设置窗口中的【Name】输入框内，输入imageView，作为Image View控件在类文件中对应的属性名称。然后点击连接按钮，完成连接的操作。连接完成后，将在ViewController.swift文件中，增加一个名为imageView的属性，该属性的类型为UIImageView。左侧的@IBOutlet标记，说明该属性是来自Storyboard控件的连接属性：  
+
+```swift
+@IBOutlet weak var imageView：UIImageView！
+```
 使用相同的方式，将Label标签控件，也和视图控制器的类文件中的属性进行连接。最后将Button按钮控件也和类文件进行连接，只是在弹出的连接设置窗口中，操作有些不同，如图19.24所示。首先点击【Connection】下拉箭头，弹出连接类型列表，然后选择列表中的【Action】选项，设置连接的类型为Action动作类型。接着在【Name】输入框内，输入动作的名称。   
 ![](snapshot/1901_1924.jpg)  
 图19.24  
-完成连接设置之后，保持其他选项的默认设置，然后点击【Connect】按钮，结束连接的配置，并在代码文件中创建一个名为nextPicture的方法，方法名称左侧的@IBAction标记，表示该方法是来自Storyboard的连接方法。
-1 @IBAction func nextPicture(_ sender：AnyObject) {
-2 }
+完成连接设置之后，保持其他选项的默认设置，然后点击【Connect】按钮，结束连接的配置，并在代码文件中创建一个名为nextPicture的方法，方法名称左侧的@IBAction标记，表示该方法是来自Storyboard的连接方法。  
+
+```swift
+ @IBAction func nextPicture(_ sender：UIButton) {
+ }
+```
 接着为ViewController类文件添加一个名为currentImageNum的整型变量，用来标识当前正在显示的图片的序号，并设置该属性的默认值为1。接着对nextPicture方法进行修改，完成该方法的点击事件，最终的代码如下所示。
 
 ```swift
