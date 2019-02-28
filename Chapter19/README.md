@@ -8,7 +8,6 @@ iOS移动开发从入门到精通 书名：iOS移动开发从入门到精通 作
 ### 19.1.2  故事板的组织形式 396                               
 ### 19.1.3  创建一个Storyboard 397              
 
-19.1.3　创建一个Storyboard
 使用【Single View Application】模板创建的项目，将自带两个Storyboard文件，一个是Main.storyboard，用于呈现应用程序的主界面。
 另一个是LaunchScreen.storyboard文件，用于设计和布局应用程序的启动界面。
 如果需要添加更多的Storyboard文件，可以在项目文件夹上点击鼠标右键，弹出右键菜单，然后选择【New File】选项，如图19.4所示。   
@@ -31,9 +30,7 @@ Storyboard创建后，将在左侧的项目导航区出现一个名为 AnotherSt
 ![](snapshot/1901_1909.jpg)
 图19.9  
 
-               
 ### 19.1.4  更改故事板的初始视图控制器 398                
-19.1.4　更改故事板的初始视图控制器
 在设置完视图控制器之后，需要将该视图控制器作为故事板的初始视图控制器。首先选择当前的视图控制器，然后在右侧的属性观察器面板中，勾选【是否初始视图控制器】复选框，将该视图控制器设置为AnotherStoryboard的初始视图控制器，当程序加载该Storyboard时，将自
 动加载当前的视图控制器，如图19.10所示。  
 ![](snapshot/1901_1910.jpg)
@@ -44,7 +41,7 @@ Storyboard创建后，将在左侧的项目导航区出现一个名为 AnotherSt
 在【Deployment Info】设置区域的【Main Interface】输入框内，默认为Main.storyboard，点击输入框右侧的下拉箭头，显示项目中的Storyboard列表。   
 ![](snapshot/1901_1912.jpg)  
 图19.12  
-在弹出的Storyboard列表中，选择【AnotherStoryboard.storyboard】选项，更改项目的Main Interface。然后点击Xcode界面左上角的【编译并运行】按钮，打开模拟器预览项目。项目运行后，将弹出一个绿色背影的模拟器，如图19.12所示。     
+在弹出的Storyboard列表中，选择【AnotherStoryboard.storyboard】选项，更改项目的Main Interface。然后点击Xcode界面左上角的【编译并运行】按钮，打开模拟器预览项目。项目运行后，将弹出一个绿色背影的模拟器，如图19.12所示。       
 ## 19.2  在Storyboard中使用标准控件 400             
 
 使用Storyboard，我们可以通过拖曳的方式，轻松、快捷地往界面中添加控件，就像在玩积木游戏一样。
@@ -95,25 +92,27 @@ Storyboard创建后，将在左侧的项目导航区出现一个名为 AnotherSt
 1 @IBAction func nextPicture(_ sender：AnyObject) {
 2 }
 接着为ViewController类文件添加一个名为currentImageNum的整型变量，用来标识当前正在显示的图片的序号，并设置该属性的默认值为1。接着对nextPicture方法进行修改，完成该方法的点击事件，最终的代码如下所示。
-1 import UIKit
-2
-3 class ViewController：UIViewController {
-4 var currentImageNum = 1
-5 @IBOutlet var picName：UILabel！
-6 @IBOutlet var imageView：UIImageView！
-7 @IBAction func nextPicture(sender：AnyObject) {
-8 currentImageNum += 1
-9 let pciture = “Pic\(currentImageNum)”
-10 imageView.image = UIImage(named：pciture)
-11 picName.text = pciture
-12 }
-13 override func viewDidLoad() {
-14 super.viewDidLoad()
-15 // Do any additional setup after loading the view,
-typically from a nib.
-16 }
-17 }
-在第8～11行的代码中，实现了按钮的点击事件，当用户点击按钮时，currentImageNum变量值递增1，然后根据currentImageNum变量的值，获得下一张图片的名称，并将该图片加载到内存后，赋予imageView对象的image属性，从而更改Image View视图的图像内容。接着修改picName标签对象的text属性，更改标签对象的显示内容为新图片的名称。
+
+```swift
+var currentImageNum = 1
+@IBOutlet weak var imageView: UIImageView!
+@IBOutlet weak var picName: UILabel!
+
+@IBAction func nextPicture(_ sender: UIButton) {
+    currentImageNum += 1
+    let picture = "Pic\(currentImageNum)"
+    imageView.image = UIImage(named: picture)
+    picName.text = picture
+}
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+```
+
+在第5～10行的代码中，实现了按钮的点击事件，当用户点击按钮时，currentImageNum变量值递增1，然后根据currentImageNum变量的值，获得下一张图片的名称，并将该图片加载到内存后，赋予imageView对象的image属性，从而更改Image View视图的图像内容。接着修改picName标签对象的text属性，更改标签对象的显示内容为新图片的名称。
 现在已经完成了所有的编码操作，从代码中可以看出，使用Storyboard大大减少了代码的数量。点击【编译并运行】按钮，打开模拟器预览项目，结果如图19.25所示。
 在打开的模拟器中，点击【Next】按钮，显示下一张图片，并在标签视图中显示下一张图片的名称，如图19.26所示。继续点击【Next】按钮，再次显示下一张图片，如图19.27所示。   
 ![](snapshot/1901_1925.jpg)  
