@@ -6,7 +6,7 @@ Chapter11 Alamofire
 ### Get and Post Requset
 
 
-- Get   
+- Get   Request
 ```swift
 @IBAction func clickGetRequestBtn(_ sender: UIButton) {
     Alamofire.request("https://httpbin.org/get", method: .get, parameters: ["foo":"bar"]).responseJSON { response in
@@ -24,7 +24,7 @@ Chapter11 Alamofire
 }
 ```
 
-- Get Request  
+- Get Response  
 ```
 original URL request: Optional(https://httpbin.org/get?foo=bar)
 URL response: Optional(<NSHTTPURLResponse: 0x60000189a480> { URL: https://httpbin.org/get?foo=bar } { Status Code: 200, Headers {
@@ -73,7 +73,7 @@ JSON: {
 }
 ```
 
-- Post  
+- Post  Request
 ```swift
 @IBAction func clickPostRequestBtn(_ sender: UIButton) {
     let parameters = [
@@ -100,7 +100,7 @@ JSON: {
 }
 ```
 
-- Post Request  
+- Post Response  
 ```
 original URL request: Optional(https://httpbin.org/post)
 URL response: Optional(<NSHTTPURLResponse: 0x600001899ea0> { URL: https://httpbin.org/post } { Status Code: 200, Headers {
