@@ -12,6 +12,7 @@
 		3F5856A32235ED770039BECA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5856A12235ED770039BECA /* Main.storyboard */; };
 		3F5856A52235ED810039BECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5856A42235ED810039BECA /* Assets.xcassets */; };
 		3F5856A82235ED810039BECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5856A62235ED810039BECA /* LaunchScreen.storyboard */; };
+		3F95A32A22389EFB0090A5FC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F95A32922389EFB0090A5FC /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		3F5856A42235ED810039BECA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F5856A72235ED810039BECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F5856A92235ED810039BECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F95A32922389EFB0090A5FC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3F95A32B22389F150090A5FC /* SimpleMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleMap.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F95A32A22389EFB0090A5FC /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				3F58569C2235ED770039BECA /* SimpleMap */,
 				3F58569B2235ED770039BECA /* Products */,
+				3F95A32822389EFB0090A5FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		3F58569C2235ED770039BECA /* SimpleMap */ = {
 			isa = PBXGroup;
 			children = (
+				3F95A32B22389F150090A5FC /* SimpleMap.entitlements */,
 				3F58569D2235ED770039BECA /* AppDelegate.swift */,
 				3F58569F2235ED770039BECA /* ViewController.swift */,
 				3F5856A12235ED770039BECA /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				3F5856A92235ED810039BECA /* Info.plist */,
 			);
 			path = SimpleMap;
+			sourceTree = "<group>";
+		};
+		3F95A32822389EFB0090A5FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F95A32922389EFB0090A5FC /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,14 @@
 				TargetAttributes = {
 					3F5856992235ED770039BECA = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -282,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleMap/SimpleMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84YDQ32Q44;
 				INFOPLIST_FILE = SimpleMap/Info.plist;
@@ -300,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SimpleMap/SimpleMap.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84YDQ32Q44;
 				INFOPLIST_FILE = SimpleMap/Info.plist;
