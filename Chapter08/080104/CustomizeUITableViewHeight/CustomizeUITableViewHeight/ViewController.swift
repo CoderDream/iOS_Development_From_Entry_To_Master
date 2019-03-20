@@ -41,15 +41,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if cell == nil {
             print("indexPath New:  \(indexPath)")
             cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: identifier)
-        }
-        
-        if (indexPath as NSIndexPath).row % 2 == 0 {
-            print("indexPath A:  \(indexPath)")
-            cell?.imageView?.image = UIImage(named: "picture.png")
-        }
-        else {
-            print("indexPath B:  \(indexPath)")
-            cell?.textLabel?.text = "\(indexPath)每有会意，便欣然忘食！"
+            
+            if (indexPath as NSIndexPath).row % 2 == 0 {
+                print("indexPath A:  \(indexPath)")
+                cell?.imageView?.image = UIImage(named: "picture.png")
+            }
+            else {
+                print("indexPath B:  \(indexPath)")
+                cell?.textLabel?.text = "\(indexPath)每有会意，便欣然忘食！"
+            }
         }
         
         return cell!
