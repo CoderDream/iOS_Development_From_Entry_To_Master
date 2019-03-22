@@ -1,5 +1,5 @@
 
-#第08章　UITableView和UICollectionView  
+# 第08章　UITableView和UICollectionView  
 
 UITableView是在iOS开发中使用极为广泛的控件，绝大部分iOS应用中都能看到它的身影，同时它也是具备非常多知识点的控件。  
 
@@ -17,8 +17,10 @@ UITableView在应用程序中可用于：
 - 提供一个可供选择的列表（如图8.2所示）。
 - 显示一系列数据的索引列表（如图8.3所示）。
 - 利用分组结构，展示细节信息和更详细的设置（如图8.4所示）。  
-![](snapshot/08_01.jpg)  
-图8.1  
+
+<div align="center">![Screenshot from 2018-04-12 10:51:38.png](https://upload-images.jianshu.io/upload_images/10028058-8f88a15298d8ef12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div>
+<div align=center>![](snapshot/08_01.jpg)  </div>
+<center>图8.1</center>  
 ![](snapshot/08_02.jpg)  
 图8.2  
 ![](snapshot/08_03.jpg)  
