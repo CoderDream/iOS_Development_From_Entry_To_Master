@@ -11,15 +11,17 @@ UITableView是在iOS开发中使用极为广泛的控件，绝大部分iOS应用
 
 UITableView用于在一栏内显示一系列对象，它是UIScorllView的子类。大家知道，UIScrollView可以在任意方向上滑动内容，而UITableView仅支持在垂直方向上的滑动。UITableView由单元格UITableViewCell组成，UITableView中的内容都是由UITableViewCell负责显示的。  
 
+<div style="align: center">
+<img src="http://upload-images.jianshu.io/upload_images/2182065-91ff11ffeb37cff2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"/>
+</div>
+
 UITableView在应用程序中可用于：  
 
 - 方便用户浏览具有层次结构的数据（如图8.1所示）。
 - 提供一个可供选择的列表（如图8.2所示）。
 - 显示一系列数据的索引列表（如图8.3所示）。
 - 利用分组结构，展示细节信息和更详细的设置（如图8.4所示）。  
-
-<div align="center">![Screenshot from 2018-04-12 10:51:38.png](https://upload-images.jianshu.io/upload_images/10028058-8f88a15298d8ef12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</div>
-<div align=center>![](snapshot/08_01.jpg)  </div>
+![](snapshot/08_01.jpg)
 <center>图8.1</center>  
 ![](snapshot/08_02.jpg)  
 图8.2  
