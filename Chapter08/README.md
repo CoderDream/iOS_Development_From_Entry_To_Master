@@ -75,17 +75,14 @@ UITableViewCell类定义了单元格在UITableView中的属性和行为。
 ```swift
 1 import UIKit
 2
-3 class ViewController：UIViewController,
-UITableViewDataSource {
+3 class ViewController：UIViewController,UITableViewDataSource {
 4
 5 override func viewDidLoad() {
 6 super.viewDidLoad()
-7 // Do any additional setup after loading the view,
-typically from a nib.
+7 // Do any additional setup after loading the view,typically from a nib.
 8
 9 let screenRect = UIScreen.main.bounds
-10 let tableRect = CGRect(x：0, y：20, width：
-screenRect.size.width, height：screenRect.size.height - 20)
+10 let tableRect = CGRect(x：0, y：20, width：screenRect.size.width, height：screenRect.size.height - 20)
 11 let tableView = UITableView(frame：tableRect)
 12
 13 tableView.dataSource = self
@@ -93,26 +90,21 @@ screenRect.size.width, height：screenRect.size.height - 20)
 15 self.view.addSubview(tableView)
 16 }
 17
-18 func tableView(_ tableView：UITableView,
-numberOfRowsInSection section：Int) -> Int{
+18 func tableView(_ tableView：UITableView,numberOfRowsInSection section：Int) -> Int{
 19 return 20
 20 }
 21
-22 func tableView(_ tableView：UITableView,
-cellForRowAt indexPath：IndexPath) -> UITableViewCell {
+22 func tableView(_ tableView：UITableView,cellForRowAt indexPath：IndexPath) -> UITableViewCell {
 23
 24 let identifier = “reusedCell”
-25 var cell =
-tableView.dequeueReusableCell(withIdentifier：identifier)
+25 var cell = tableView.dequeueReusableCell(withIdentifier：identifier)
 26
 27 if(cell == nil)
 28 {
-29 cell = UITableViewCell(style：
-UITableViewCellStyle.default, reuseIdentifier：identifier)
+29 cell = UITableViewCell(style：UITableViewCellStyle.default, reuseIdentifier：identifier)
 30 }
 31
-32 cell？.textLabel？.text = “命运负责洗牌，玩牌的是我们
-自己！”
+32 cell？.textLabel？.text = “命运负责洗牌，玩牌的是我们自己！”
 33
 34 return cell！
 35 }
@@ -161,8 +153,7 @@ UITableView采用相同的复用机制，一个UITableView对象可能拥有超�
 ```swift
 27 if(cell == nil)
 28 {
-29 cell = UITableViewCell(style：
-UITableViewCellStyle.default, reuseIdentifier：identifier)
+29 cell = UITableViewCell(style：UITableViewCellStyle.default, reuseIdentifier：identifier)
 30 }
 ```
 其中初始化UITableViewCell对象的方法init(style style：UITableViewCellStyle,reuseIdentifier reuseIdentifier：String？)，其参数说明如表8-4所示。  
@@ -197,25 +188,19 @@ UITableViewCellStyle.default, reuseIdentifier：identifier)
 6 var title：UILabel！
 7 var detail：UIButton！
 8
-9 override init(style：UITableViewCellStyle,
-reuseIdentifier：String？) {
+9 override init(style：UITableViewCellStyle,reuseIdentifier：String？) {
 10
-11 super.init(style：style, reuseIdentifier：
-reuseIdentifier);
+11 super.init(style：style, reuseIdentifier：reuseIdentifier);
 12
-13 self.thumbnail = UIImageView(image：
-UIImage(named：“user”))
+13 self.thumbnail = UIImageView(image：UIImage(named：“user”))
 14 self.thumbnail.center = CGPoint(x：30, y：22)
-15 self.title = UILabel(frame：CGRect(x：80, y：0,
-width：120, height：40))
+15 self.title = UILabel(frame：CGRect(x：80, y：0,width：120, height：40))
 16 self.title.text = “自定义单元格”
 17
-18 self.detail = UIButton(frame：CGRect(x：240, y：8,
-width：60, height：24))
+18 self.detail = UIButton(frame：CGRect(x：240, y：8,width：60, height：24))
 19 self.detail.setTitle(“详情”, for：UIControlState())
 20 self.detail.backgroundColor = UIColor.gray
-21 self.detail.addTarget(self, action：“showDetail：”,
-for：UIControlEvents.touchUpInside)
+21 self.detail.addTarget(self, action：“showDetail：”,for：UIControlEvents.touchUpInside)
 22
 23 self.addSubview(self.thumbnail)
 24 self.addSubview(self.title)
@@ -240,18 +225,15 @@ for：UIControlEvents.touchUpInside)
 现在完成了自定义的CustomizeUITableViewCell类文件的创建，接着在ViewController.swift类文件中，调用该自定义单元格类。  
 ViewController.swift类文件中的代码与上节课中的代码基本一致，只需修改一下tableView (_：cellForRowAtIndexPath：)方法，如下所示。  
 ```swift
-1 func tableView(_ tableView：UITableView,
-cellForRowAt indexPath：IndexPath) -> UITableViewCell {
+1 func tableView(_ tableView：UITableView,cellForRowAt indexPath：IndexPath) -> UITableViewCell {
 2
 3 let identifier = “reusedCell”
-4 var cell：CustomizeUITableViewCell？=
-tableView.dequeueReusableCell(withIdentifier：identifier)
+4 var cell：CustomizeUITableViewCell？=tableView.dequeueReusableCell(withIdentifier：identifier)
 as？CustomizeUITableViewCell
 5
 6 if(cell == nil)
 7 {
-8 cell = CustomizeUITableViewCell(style：
-UITableViewCellStyle.default, reuseIdentifier： identifier)
+8 cell = CustomizeUITableViewCell(style：UITableViewCellStyle.default, reuseIdentifier： identifier)
 9 }
 10
 11 cell？.title？.text = “客户姓名”
@@ -272,17 +254,14 @@ UITableViewCellStyle.default, reuseIdentifier： identifier)
 ```swift
 1 import UIKit
 2
-3 class ViewController：UIViewController,
-UITableViewDataSource, UITableViewDelegate {
+3 class ViewController：UIViewController,UITableViewDataSource, UITableViewDelegate {
 4
 5 override func viewDidLoad() {
 6 super.viewDidLoad()
-7 // Do any additional setup after loading the view,
-typically from a nib.
+7 // Do any additional setup after loading the view,typically from a nib.
 8
 9 let screenRect = UIScreen.main.bounds
-10 let tableRect = CGRect(x：0, y：20, width：
-screenRect.size.width, height：screenRect.size.height - 20)
+10 let tableRect = CGRect(x：0, y：20, width：screenRect.size.width, height：screenRect.size.height - 20)
 11 let tableView = UITableView(frame：tableRect)
 12
 13 tableView.dataSource = self
@@ -291,8 +270,7 @@ screenRect.size.width, height：screenRect.size.height - 20)
 16 self.view.addSubview(tableView)
 17 }
 18
-19 func tableView(_ tableView：UITableView,
-heightForRowAt indexPath：IndexPath) -> CGFloat {
+19 func tableView(_ tableView：UITableView,heightForRowAt indexPath：IndexPath) -> CGFloat {
 20 if (indexPath as NSIndexPath).row ％ 2 == 0
 21 {
 22 return 104;
@@ -300,27 +278,22 @@ heightForRowAt indexPath：IndexPath) -> CGFloat {
 24 return 40;
 25 }
 26
-27 func tableView(_ tableView：UITableView,
-numberOfRowsInSection section：Int) -> Int{
+27 func tableView(_ tableView：UITableView,numberOfRowsInSection section：Int) -> Int{
 28 return 20
 29 }
 30
-31 func tableView(_ tableView：UITableView,
-cellForRowAt indexPath：IndexPath) -> UITableViewCell {
+31 func tableView(_ tableView：UITableView,cellForRowAt indexPath：IndexPath) -> UITableViewCell {
 32
 33 let identifier = “reusedCell”
-34 var cell =
-tableView.dequeueReusableCell(withIdentifier：identifier)
+34 var cell = tableView.dequeueReusableCell(withIdentifier：identifier)
 35
 36 if(cell == nil)
 37 {
-38 cell = UITableViewCell(style：
-UITableViewCellStyle.default, reuseIdentifier：identifier)
+38 cell = UITableViewCell(style：UITableViewCellStyle.default, reuseIdentifier：identifier)
 39 }
 40 if (indexPath as NSIndexPath).row ％ 2 == 0
 41 {
-42 cell？.imageView？.image =
-UIImage(named：“picture.png”)
+42 cell？.imageView？.image = UIImage(named：“picture.png”)
 43 }
 44 else
 45 {
@@ -393,14 +366,12 @@ Montenegro”,“Senegal”,“Singapore”,“Somalia”,“Switzerland”],
 8
 9 override func viewDidLoad() {
 10 super.viewDidLoad()
-11 // Do any additional setup after loading the view,
-typically from a nib.
+11 // Do any additional setup after loading the view,typically from a nib.
 12
 13 keys = Array(countries.keys).sorted()
 14
 15 let screenRect = UIScreen.main.bounds
-16 let tableRect = CGRect(x：0, y：20, width：
-screenRect.size.width, height：screenRect.size.height - 20)
+16 let tableRect = CGRect(x：0, y：20, width：screenRect.size.width, height：screenRect.size.height - 20)
 17 let tableView = UITableView(frame：tableRect)
 18
 19 tableView.dataSource = self
@@ -408,43 +379,34 @@ screenRect.size.width, height：screenRect.size.height - 20)
 21 self.view.addSubview(tableView)
 22 }
 23
-24 func numberOfSections(in tableView：UITableView) ->
-Int {
+24 func numberOfSections(in tableView：UITableView) -> Int {
 25 return keys.count
 26 }
 27
-28 func tableView(_ tableView：UITableView,
-numberOfRowsInSection section：Int) -> Int{
+28 func tableView(_ tableView：UITableView, numberOfRowsInSection section：Int) -> Int{
 29 let subCountries = countries[keys[section]]
 30 return (subCountries？.count)！
 31 }
 32
-33 func tableView(_ tableView：UITableView,
-titleForHeaderInSection section：Int) -> String？{
+33 func tableView(_ tableView：UITableView, titleForHeaderInSection section：Int) -> String？{
 34 return keys[section]
 35 }
 36
-37 func sectionIndexTitles(for tableView：UITableView) -
-> [String]？{
+37 func sectionIndexTitles(for tableView：UITableView) -> [String]？{
 38 return keys
 39 }
 40
-41 func tableView(_ tableView：UITableView,
-cellForRowAt indexPath：IndexPath) -> UITableViewCell {
+41 func tableView(_ tableView：UITableView, cellForRowAt indexPath：IndexPath) -> UITableViewCell {
 42
 43 let identifier = “reusedCell”
-44 var cell =
-tableView.dequeueReusableCell(withIdentifier：identifier)
+44 var cell = tableView.dequeueReusableCell(withIdentifier：identifier)
 45
 46 if(cell == nil){
-47 cell = UITableViewCell(style：
-UITableViewCellStyle.default, reuseIdentifier：identifier)
+47 cell = UITableViewCell(style：UITableViewCellStyle.default, reuseIdentifier：identifier)
 48 }
 49
-50 let subCountries = countries[keys[(indexPath as
-NSIndexPath).section]]
-51 cell？.textLabel？.text = subCountries！[(indexPath as
-NSIndexPath).row]
+50 let subCountries = countries[keys[(indexPath as NSIndexPath).section]]
+51 cell？.textLabel？.text = subCountries！[(indexPath as NSIndexPath).row]
 52
 53 return cell！
 54 }
@@ -469,20 +431,16 @@ NSIndexPath).row]
 ```swift
 1 import UIKit
 2
-3 class ViewController：UIViewController,
-UITableViewDataSource, UITableViewDelegate{
+3 class ViewController：UIViewController, UITableViewDataSource, UITableViewDelegate{
 4
-5 let diablo3Level = [“普通模式”, “困难模式”, “高手模式”,
-“大师模式”, “痛苦模式”]
+5 let diablo3Level = [“普通模式”, “困难模式”, “高手模式”, “大师模式”, “痛苦模式”]
 6
 7 override func viewDidLoad() {
 8 super.viewDidLoad()
-9 // Do any additional setup after loading the view,
-typically from a nib.
+9 // Do any additional setup after loading the view, typically from a nib.
 10
 11 let screenRect = UIScreen.main.bounds
-12 let tableRect = CGRect(x：0, y：20, width：
-screenRect.size.width, height：screenRect.size.height - 20)
+12 let tableRect = CGRect(x：0, y：20, width：screenRect.size.width, height：screenRect.size.height - 20)
 13 let tableView = UITableView(frame：tableRect)
 14
 15 tableView.dataSource = self
@@ -490,43 +448,34 @@ screenRect.size.width, height：screenRect.size.height - 20)
 17 self.view.addSubview(tableView)
 18 }
 19
-20 func tableView(_ tableView：UITableView,
-numberOfRowsInSection section：Int) -> Int{
+20 func tableView(_ tableView：UITableView, numberOfRowsInSection section：Int) -> Int{
 21 return diablo3Level.count
 22 }
 23
-24 func tableView(_ tableView：UITableView,
-cellForRowAt indexPath：IndexPath)
+24 func tableView(_ tableView：UITableView, cellForRowAt indexPath：IndexPath)
 25 -> UITableViewCell {
 26
 27 let identifier = “reusedCell”
-28 var cell =
-tableView.dequeueReusableCell(withIdentifier：identifier)
+28 var cell = tableView.dequeueReusableCell(withIdentifier：identifier)
 29
 30 if(cell == nil)
 31 {
-32 cell = UITableViewCell(style：
-UITableViewCellStyle.default,
+32 cell = UITableViewCell(style：UITableViewCellStyle.default,
 33 reuseIdentifier：identifier)
 34 }
 35
-36 cell？.textLabel？.text = diablo3Level[(indexPath as
-NSIndexPath).row]
+36 cell？.textLabel？.text = diablo3Level[(indexPath as NSIndexPath).row]
 37
 38 return cell！
 39 }
 40
-41 func tableView(_ tableView：UITableView,
-didSelectRowAt indexPath：IndexPath) {
-42 let cell = tableView.cellForRow(at：indexPath)
-43 if(cell？.accessoryType ==
-UITableViewCellAccessoryType.none){
-44 cell？.accessoryType =
-UITableViewCellAccessoryType.checkmark
+41 func tableView(_ tableView：UITableView, didSelectRowAt indexPath：IndexPath) {
+42 let cell = tableView.cellForRow(at：indexPath) 
+43 if(cell？.accessoryType == UITableViewCellAccessoryType.none){
+44 cell？.accessoryType = UITableViewCellAccessoryType.checkmark
 45 print(“您选择了：\(cell？.textLabel？.text)”)
 46 }else{
-47 cell？.accessoryType =
-UITableViewCellAccessoryType.none
+47 cell？.accessoryType = UITableViewCellAccessoryType.none
 48 print(“您取消选择了：\(cell？.textLabel？.text)”)
 49 }
 50 }
@@ -568,20 +517,16 @@ UITableViewController则被看作UITableView表格和游戏难度信息数据模
 ```swift
 1 import UIKit
 2
-3 class ViewController：UIViewController,
-UITableViewDataSource, UITableViewDelegate{
+3 class ViewController：UIViewController, UITableViewDataSource, UITableViewDelegate{
 4
-5 var diablo3Level = [“普通模式”, “困难模式”, “高手模
-式”, “大师模式”, “地狱模式”]
+5 var diablo3Level = [“普通模式”, “困难模式”, “高手模式”, “大师模式”, “地狱模式”]
 6
 7 override func viewDidLoad() {
 8 super.viewDidLoad()
-9 // Do any additional setup after loading the view,
-typically from a nib.
+9 // Do any additional setup after loading the view, typically from a nib.
 10
 11 let screenRect = UIScreen.main.bounds
-12 let tableRect = CGRect(x：0, y：20, width：
-screenRect.size.width, height：screenRect.size.height - 20)
+12 let tableRect = CGRect(x：0, y：20, width：screenRect.size.width, height：screenRect.size.height - 20)
 13 let tableView = UITableView(frame：tableRect)
 14
 15 tableView.dataSource = self
@@ -590,43 +535,35 @@ screenRect.size.width, height：screenRect.size.height - 20)
 18 self.view.addSubview(tableView)
 19 }
 20
-21 func tableView(_ tableView：UITableView,
-numberOfRowsInSection section：Int) -> Int{
+21 func tableView(_ tableView：UITableView, numberOfRowsInSection section：Int) -> Int{
 22 return diablo3Level.count
 23 }
 24
-25 func tableView(_ tableView：UITableView,
-cellForRowAt indexPath：IndexPath)
+25 func tableView(_ tableView：UITableView, cellForRowAt indexPath：IndexPath)
 26 -> UITableViewCell {
 27
 28 let identifier = “reusedCell”
-29 var cell =
-tableView.dequeueReusableCell(withIdentifier：identifier)
+29 var cell = tableView.dequeueReusableCell(withIdentifier：identifier)
 30
 31 if(cell == nil){
-32 cell = UITableViewCell(style：
-UITableViewCellStyle.default,
+32 cell = UITableViewCell(style：UITableViewCellStyle.default,
 33 reuseIdentifier：identifier)
 34 }
 35
-36 cell？.textLabel？.text = diablo3Level[(indexPath as
-NSIndexPath).row]
+36 cell？.textLabel？.text = diablo3Level[(indexPath as NSIndexPath).row]
 37 return cell！
 38 }
 39
-40 func tableView(_ tableView：UITableView,
-editingStyleForRowAt indexPath：IndexPath) ->
+40 func tableView(_ tableView：UITableView, editingStyleForRowAt indexPath：IndexPath) ->
 UITableViewCellEditingStyle {
 41 return UITableViewCellEditingStyle.insert
 42 }
 43
 44 func tableView(_ tableView：UITableView, commit
-45 editingStyle：UITableViewCellEditingStyle, forRowAt
-indexPath：IndexPath) {
+45 editingStyle：UITableViewCellEditingStyle, forRowAt indexPath：IndexPath) {
 46 if editingStyle == UITableViewCellEditingStyle.insert{
 47 diablo3Level.insert(“痛苦模式”, at：indexPath.row)
-48 tableView.insertRows(at：[indexPath], with：
-UITableViewRowAnimation.right)
+48 tableView.insertRows(at：[indexPath], with：UITableViewRowAnimation.right)
 49
 50 }
 51 }
@@ -665,11 +602,9 @@ UITableViewRowAnimation.right)
 即将单元格的编辑样式从插入样式设置为删除样式。  
 接着将47～50行的代码修改为  
 ```swift
-47 if editingStyle ==
-UITableViewCellEditingStyle.delete{
+47 if editingStyle == UITableViewCellEditingStyle.delete{
 48 diablo3Level.remove(at：indexPath.row)
-49 tableView.deleteRows(at：[indexPath], with：
-UITableViewRowAnimation.right)
+49 tableView.deleteRows(at：[indexPath], with：UITableViewRowAnimation.right)
 50 }
 ```
 在上方的代码中，首先判断当前的编辑样式是否为删除样式，如果当前编辑样式为删除样式，则先删除位于数据源中指定位置的数据，以保持视图与数据源的数据一致性。  
@@ -692,21 +627,17 @@ UITableView的Reordering功能用途比较广泛，例如在一款客户关系�
 ```swift
 1 import UIKit
 2
-3 class ViewController：UIViewController,
-UITableViewDataSource, UITableViewDelegate{
+3 class ViewController：UIViewController, UITableViewDataSource, UITableViewDelegate{
 4
-5 var customers = [“[普通客户]冮炳林”, “[普通客户]扶伽
-霖”, “[普通客户]冈皑冰”,
+5 var customers = [“[普通客户]冮炳林”, “[普通客户]扶伽霖”, “[普通客户]冈皑冰”,
 6 “[金牌客户]符博富”, “[普通客户]范姜臣华”]
 7
 8 override func viewDidLoad() {
 9 super.viewDidLoad()
-10 // Do any additional setup after loading the view,
-typically from a nib.
+10 // Do any additional setup after loading the view, typically from a nib.
 11
 12 let screenRect = UIScreen.main.bounds
-13 let tableRect = CGRect(x：0, y：20, width：
-screenRect.size.width, height：screenRect.size.height - 20)
+13 let tableRect = CGRect(x：0, y：20, width：screenRect.size.width, height：screenRect.size.height - 20)
 14 let tableView = UITableView(frame：tableRect)
 15
 16 tableView.dataSource = self
@@ -715,47 +646,38 @@ screenRect.size.width, height：screenRect.size.height - 20)
 19 self.view.addSubview(tableView)
 20 }
 21
-22 func tableView(_ tableView：UITableView,
-numberOfRowsInSection section：Int) -> Int{
+22 func tableView(_ tableView：UITableView, numberOfRowsInSection section：Int) -> Int{
 23 return customers.count
 24 }
 25
-26 func tableView(_ tableView：UITableView,
-cellForRowAt indexPath：IndexPath)
+26 func tableView(_ tableView：UITableView, cellForRowAt indexPath：IndexPath)
 27 -> UITableViewCell {
 28
 29 let identifier = “reusedCell”
-30 var cell =
-tableView.dequeueReusableCell(withIdentifier：identifier)
+30 var cell = tableView.dequeueReusableCell(withIdentifier：identifier)
 31
 32 if(cell == nil){
-33 cell = UITableViewCell(style：
-UITableViewCellStyle.default,
+33 cell = UITableViewCell(style：UITableViewCellStyle.default,
 34 reuseIdentifier：identifier)
 35 }
 36
-37 cell？.textLabel？.text = customers[(indexPath as
-NSIndexPath).row]
+37 cell？.textLabel？.text = customers[(indexPath as NSIndexPath).row]
 38 return cell！
 39 }
 40
-41 func tableView(_ tableView：UITableView,
-editingStyleForRowAt indexPath：IndexPath) ->
+41 func tableView(_ tableView：UITableView, editingStyleForRowAt indexPath：IndexPath) ->
 UITableViewCellEditingStyle {
 42 return UITableViewCellEditingStyle.none
 43 }
 44
-45 func tableView(_ tableView：UITableView,
-canMoveRowAt indexPath：IndexPath) -> Bool {
+45 func tableView(_ tableView：UITableView, canMoveRowAt indexPath：IndexPath) -> Bool {
 46 return true
 47 }
 48
-49 func tableView(_ tableView：UITableView,
-moveRowAt sourceIndexPath：IndexPath, to
+49 func tableView(_ tableView：UITableView, moveRowAt sourceIndexPath：IndexPath, to
 destinationIndexPath：IndexPath) {
-50 let fromRow = (sourceIndexPath as NSIndexPath).row
-51 let toRow = (destinationIndexPath as
-NSIndexPath).row
+50 let fromRow = (sourceIndexPath as NSIndexPath).row 
+51 let toRow = (destinationIndexPath as NSIndexPath).row
 52 let customer = customers[fromRow]
 53
 54 customers.remove(at：fromRow)
@@ -791,20 +713,16 @@ CustomizeUITableViewCell.swift文件创建完成后，打开该文件并输入�
 ```swift
 1 import UIKit
 2
-3 class CustomizeUITableViewCell：UITableViewCell,
-UITableViewDataSource, UITableViewDelegate {
+3 class CustomizeUITableViewCell：UITableViewCell, UITableViewDataSource, UITableViewDelegate {
 4
 5 var tableView：UITableView！;
 6 var comments：[String] = []
 7
-8 override init(style：UITableViewCellStyle,
-reuseIdentifier：String？) {
+8 override init(style：UITableViewCellStyle, reuseIdentifier：String？) {
 9
-10 super.init(style：style, reuseIdentifier：
-reuseIdentifier);
+10 super.init(style：style, reuseIdentifier： reuseIdentifier);
 11
-12 tableView = UITableView(frame：CGRect(x：20, y：0,
-width：280, height：90))
+12 tableView = UITableView(frame：CGRect(x：20, y：0,width：280, height：90))
 13 tableView.dataSource = self
 14 tableView.delegate = self
 15 tableView.isScrollEnabled = false;
@@ -812,40 +730,31 @@ width：280, height：90))
 17 self.addSubview(tableView)
 18 }
 19
-20 func tableView(_ tableView：UITableView,
-numberOfRowsInSection section：Int) -> Int{
+20 func tableView(_ tableView：UITableView, numberOfRowsInSection section：Int) -> Int{
 21 return comments.count
 22 }
 23
-24 func tableView(_ tableView：UITableView,
-cellForRowAt indexPath：IndexPath)
+24 func tableView(_ tableView：UITableView, cellForRowAt indexPath：IndexPath)
 25 -> UITableViewCell {
 26 let identifier = “reusedCell”
-27 var cell =
-tableView.dequeueReusableCell(withIdentifier：identifier)
+27 var cell = tableView.dequeueReusableCell(withIdentifier：identifier)
 28
 29 if(cell == nil){
-30 cell = UITableViewCell(style：
-UITableViewCellStyle.default,
+30 cell = UITableViewCell(style：UITableViewCellStyle.default,
 31 reuseIdentifier：identifier)
 32 }
-33 cell？.textLabel？.text = comments[(indexPath as
-NSIndexPath).row]
-34 cell？.textLabel？.font = UIFont.systemFont(ofSize：
-12)
+33 cell？.textLabel？.text = comments[(indexPath as NSIndexPath).row]
+34 cell？.textLabel？.font = UIFont.systemFont(ofSize：12)
 35 cell？.textLabel？.textColor = UIColor.gray
 36 cell？.textLabel？.numberOfLines = 0;
 37 return cell！
 38 }
 39
-40 func tableView(_ tableView：UITableView,
-heightForRowAt indexPath：IndexPath)
+40 func tableView(_ tableView：UITableView, heightForRowAt indexPath：IndexPath)
 41 -> CGFloat {
-42 let subComments = comments[(indexPath as
-NSIndexPath).row]
+42 let subComments = comments[(indexPath as NSIndexPath).row]
 43 let size = subComments.boundingRect(with：CGSize(),
-44 options：NSStringDrawingOptions.usesFontLeading,
-attributes：nil, context：nil);
+44 options：NSStringDrawingOptions.usesFontLeading, attributes：nil, context：nil);
 45 let cellHeight = size.height*size.width/170
 46 if(cellHeight < 30){
 47 return 30
@@ -861,12 +770,10 @@ attributes：nil, context：nil);
 57 for i in 0 ..< comments.count
 58 {
 59 let size = comments[i].boundingRect(with：CGSize(),
-60 options：NSStringDrawingOptions.usesFontLeading,
-attributes：nil, context：nil);
+60 options：NSStringDrawingOptions.usesFontLeading, attributes：nil, context：nil);
 61 tableHeight += size.height*size.width/170
 62 }
-63 tableView.frame = CGRect(x：20, y：0, width：280,
-height：tableHeight + 50)
+63 tableView.frame = CGRect(x：20, y：0, width：280, height：tableHeight + 50)
 64 tableView.reloadData()
 65 }
 66
@@ -896,12 +803,10 @@ height：tableHeight + 50)
 58 for i in 0 ..< comments.count
 59 {
 60 let size = comments[i].boundingRect(with：CGSize(),
-61 options：NSStringDrawingOptions.usesFontLeading,
-attributes：nil, context：nil);
+61 options：NSStringDrawingOptions.usesFontLeading, attributes：nil, context：nil);
 62 tableHeight += size.height*size.width/170
 63 }
-64 tableView.frame = CGRect(x：20, y：0, width：280,
-height：tableHeight + 50)
+64 tableView.frame = CGRect(x：20, y：0, width：280, height：tableHeight + 50)
 65 tableView.reloadData()
 ``` 
 这里和计算一个单元格高度的方法相同，通过一个for循环语句，把表格中所有的单元格的高度都分别计算一次，然后把结果累加起来作为表格的高度，最后把累加后的高度数值赋予当前的tableView对象。注意在第64行的代码中，将表格的高度额外增加50，这样可以使表格对象避免过于拥挤。  
@@ -910,39 +815,31 @@ height：tableHeight + 50)
 ```swift
 1 import UIKit
 2
-3 class ViewController：UIViewController,
-UITableViewDataSource, UITableViewDelegate {
+3 class ViewController：UIViewController, UITableViewDataSource, UITableViewDelegate {
 4
-5 var articles = [“微软有哪些「黑历史」？”, “苹果有哪些
-黑科技？”, “巴宝莉和 Apple TV 强强 联手推出天台秀直播”]
-6 var comments = [[“省略的文字”，”省略的文字”],[“省略的
-文字”，”省略的文字”],[“省略的文字”， “省略的文字”]]
+5 var articles = [“微软有哪些「黑历史」？”, “苹果有哪些黑科技？”, “巴宝莉和 Apple TV 强强 联手推出天台秀直播”]
+6 var comments = [[“省略的文字”，”省略的文字”],[“省略的文字”，”省略的文字”],[“省略的文字”， “省略的文字”]]
 7
 8 override func viewDidLoad() {
 9 super.viewDidLoad()
-10 // Do any additional setup after loading the view,
-typically from a nib.
+10 // Do any additional setup after loading the view,typically from a nib.
 11
 12 let screenRect = UIScreen.main.bounds
-13 let tableRect = CGRect(x：0, y：20, width：
-screenRect.size.width, height：screenRect.size.height - 20)
+13 let tableRect = CGRect(x：0, y：20, width：screenRect.size.width, height：screenRect.size.height - 20)
 14 let tableView = UITableView(frame：tableRect)
 15
 16 tableView.dataSource = self
 17 tableView.delegate = self
-18 tableView.separatorStyle =
-UITableViewCellSeparatorStyle.none
+18 tableView.separatorStyle = UITableViewCellSeparatorStyle.none
 19
 20 self.view.addSubview(tableView)
 21 }
 22
-23 func tableView(_ tableView：UITableView,
-numberOfRowsInSection section：Int) -> Int{
+23 func tableView(_ tableView：UITableView, numberOfRowsInSection section：Int) -> Int{
 24 return articles.count * 2
 25 }
 26
-27 func tableView(_ tableView：UITableView,
-cellForRowAt indexPath：IndexPath)
+27 func tableView(_ tableView：UITableView, cellForRowAt indexPath：IndexPath)
 28 -> UITableViewCell {
 29
 30 let cellForArticle = “cellForArticle”
@@ -952,51 +849,37 @@ cellForRowAt indexPath：IndexPath)
 34 var cell2：CustomizeUITableViewCell？;
 35
 36 if (indexPath as NSIndexPath).row ％ 2 == 0{
-37 cell1 =
-tableView.dequeueReusableCell(withIdentifier：
-cellForArticle)
+37 cell1 = tableView.dequeueReusableCell(withIdentifier：cellForArticle)
 38 if cell1 == nil{
-39 cell1 = UITableViewCell(style：
-UITableViewCellStyle.default,
+39 cell1 = UITableViewCell(style：UITableViewCellStyle.default,
 40 reuseIdentifier：cellForArticle)
 41 }
-42 cell1？.textLabel？.text = articles[(indexPath as
-NSIndexPath).row/2]
-43 cell1？.textLabel？.font = UIFont.systemFont(ofSize：
-16)
+42 cell1？.textLabel？.text = articles[(indexPath as NSIndexPath).row/2]
+43 cell1？.textLabel？.font = UIFont.systemFont(ofSize：16)
 44 cell1？.textLabel？.textColor = UIColor.lightGray
 45 cell1？.backgroundColor = UIColor.black
 46 return cell1！
 47 }else{
-48 cell2 =
-tableView.dequeueReusableCell(withIdentifier：
-cellForComments) as？ CustomizeUITableViewCell
+48 cell2 = tableView.dequeueReusableCell(withIdentifier：cellForComments) as？ CustomizeUITableViewCell
 49 if cell2 == nil{
-50 cell2 = CustomizeUITableViewCell(style：
-UITableViewCellStyle.default,
+50 cell2 = CustomizeUITableViewCell(style：UITableViewCellStyle.default,
 51 reuseIdentifier：cellForComments)
 52 }
-53 let subComments = comments[(indexPath as
-NSIndexPath).row/2]
+53 let subComments = comments[(indexPath as NSIndexPath).row/2]
 54 cell2？.setCommentsForTable(subComments)
 55 return cell2！
 56 }
 57 }
 58
-59 func tableView(_ tableView：UITableView,
-heightForRowAt indexPath：IndexPath) -> CGFloat {
+59 func tableView(_ tableView：UITableView, heightForRowAt indexPath：IndexPath) -> CGFloat {
 60 if (indexPath as NSIndexPath).row ％ 2 == 0{
 61 return 40
 62 }else{
-63 let subComments = comments[(indexPath as
-NSIndexPath).row/2]
+63 let subComments = comments[(indexPath as NSIndexPath).row/2]
 64 var cellHeight：CGFloat = 0
 65 for i in 0 ..< subComments.count
 66 {
-67 let size = subComments[i].boundingRect(with：
-CGSize(), options：
-NSStringDrawingOptions.usesFontLeading, attributes：nil,
-context：nil);
+67 let size = subComments[i].boundingRect(with：CGSize(), options：NSStringDrawingOptions.usesFontLeading, attributes：nil,context：nil);
 68 cellHeight += size.height*(size.width/170)
 69 }
 70 return cellHeight + 50
@@ -1067,73 +950,55 @@ UICollectionView与其他类的关系如图8.34所示。
 ```swift
 1 import UIKit
 2
-3 class ViewController：UIViewController,
-UICollectionViewDataSource, UICollectionViewDelegate {
+3 class ViewController：UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 4
-5 var images = [“Pic1”, “Pic2”, “Pic3”, “Pic8”, “Pic5”,
-“Pic6”, “Pic7”, “Pic4”, “Pic9”]
+5 var images = [“Pic1”, “Pic2”, “Pic3”, “Pic8”, “Pic5”, “Pic6”, “Pic7”, “Pic4”, “Pic9”]
 6
 7 override func viewDidLoad() {
 8 super.viewDidLoad()
-9 // Do any additional setup after loading the view,
-typically from a nib.
+9 // Do any additional setup after loading the view, typically from a nib.
 10 let screenRect = UIScreen.main.bounds
-11 let rect = CGRect(x：0, y：20, width：
-screenRect.size.width, height：screenRect.size.height - 20)
+11 let rect = CGRect(x：0, y：20, width：screenRect.size.width, height：screenRect.size.height - 20)
 12
 13 let flowLayout = UICollectionViewFlowLayout()
-14 flowLayout.itemSize = CGSize(width：155, height：
-135)
-15 flowLayout.scrollDirection =
-UICollectionViewScrollDirection.vertical
+14 flowLayout.itemSize = CGSize(width：155, height：135)
+15 flowLayout.scrollDirection = UICollectionViewScrollDirection.vertical
 16
-17 let collectionView = UICollectionView(frame：rect,
-collectionViewLayout：flowLayout)
+17 let collectionView = UICollectionView(frame：rect, collectionViewLayout：flowLayout)
 18
 19 collectionView.dataSource = self
 20 collectionView.delegate = self
-21
-collectionView.register(UICollectionViewCell.classForCoder(),
-forCellWithReuseIdentifier： “reusedCell”)
+21 collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier： “reusedCell”)
 22 self.view.addSubview(collectionView)
 23 }
 24
-25 func collectionView(_ collectionView：
-UICollectionView, numberOfItemsInSection section：Int) ->
-Int {
+25 func collectionView(_ collectionView：UICollectionView, numberOfItemsInSection section：Int) -> Int {
 26 return images.count
 27 }
 28
-29 func collectionView(_ collectionView：
-UICollectionView, cellForItemAt indexPath：IndexPath) ->
+29 func collectionView(_ collectionView：UICollectionView, cellForItemAt indexPath：IndexPath) ->
 UICollectionViewCell {
 30
 31 let identifier = “reusedCell”
-32 let cell =
-collectionView.dequeueReusableCell(withReuseIdentifier：
+32 let cell = collectionView.dequeueReusableCell(withReuseIdentifier：
 identifier, for：indexPath)
 33
-34 let imageView：UIImageView？= cell.viewWithTag(1)
-as？UIImageView
+34 let imageView：UIImageView？= cell.viewWithTag(1) as？UIImageView
 35 if imageView == nil{
-36 let image = UIImage(named：images[(indexPath as
-NSIndexPath).row])
+36 let image = UIImage(named：images[(indexPath as NSIndexPath).row])
 37 let imageView = UIImageView(image：image)
-38 imageView.frame = CGRect(x：0, y：0, width：150,
-height：135)
+38 imageView.frame = CGRect(x：0, y：0, width：150, height：135)
 39 imageView.layer.opacity = 0.5
 40 imageView.tag = 1
 41 cell.addSubview(imageView)
 42 }else{
-43 imageView？.image = UIImage(named：
-images[(indexPath as NSIndexPath).row])
+43 imageView？.image = UIImage(named：images[(indexPath as NSIndexPath).row])
 44 }
 45
 46 return cell
 47 }
 48
-49 func collectionView(_ collectionView：
-UICollectionView, didSelectItemAt indexPath：IndexPath) {
+49 func collectionView(_ collectionView：UICollectionView, didSelectItemAt indexPath：IndexPath) {
 50 let cell = collectionView.cellForItem(at：indexPath)
 51 let imageView = cell？.viewWithTag(1)
 52 imageView？.layer.opacity = 1.0;
