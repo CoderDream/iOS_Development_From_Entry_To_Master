@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         print("minX:\(minX); minY:\(minY); maxX:\(maxX); maxY:\(maxY); ")
         let touchPointX = touchPoint?.x
         let touchPointY = touchPoint?.y
-        //
+        // 根据UITouch的位置和最大值以及最小值进行比较，以判断用户是否点击了图像视图
         print("touchPointX: \(String(describing: touchPointX)),touchPointY: \(String(describing: touchPointY))")
         if touchPointX! >= minX && touchPointX! <= maxX && touchPointY! >= minY && touchPointY! <= maxY {
             isTouchInImageView = true;
