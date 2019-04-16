@@ -2,7 +2,11 @@
 //  AppDelegate.swift
 //  TouchEvent_TouchView
 //
+<<<<<<< HEAD
+//  Created by CoderDream on 2019/4/14.
+=======
 //  Created by CoderDream on 2019/4/15.
+>>>>>>> 44b85988c992365bc3705c5ac3a948f42bb4a051
 //  Copyright © 2019 CoderDream. All rights reserved.
 //
 
