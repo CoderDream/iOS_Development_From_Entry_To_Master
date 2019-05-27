@@ -1,11 +1,6 @@
-//
-//  ViewController.swift
-//  UICollectionViewSample
-//
-//  Created by CoderDream on 2019/3/21.
-//  Copyright © 2019 CoderDream. All rights reserved.
-//
+### UICollectionView 
 
+```swift
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -92,3 +87,4 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
 }
+```
